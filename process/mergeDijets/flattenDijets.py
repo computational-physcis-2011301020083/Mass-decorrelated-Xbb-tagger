@@ -10,7 +10,7 @@ features_group2=['JetFitter_N2Tpair_1', 'JetFitter_dRFlightDir_1', 'JetFitter_de
 features_group3=['Aplanarity','ZCut12','PlanarFlow','KtDR','Angularity','FoxWolfram20','Tau21_wta', 'Tau32_wta','C2','D2','Qw','Split12', 'Split23','e3'] #79-93
 
 new_file_name=args.path.split("/")[-1]
-new_hdf5 = h5py.File("../DataVRGhost/FlattenData/MergedDijets/"+new_file_name, 'w')
+new_hdf5 = h5py.File("../../DataVRGhost/FlattenData/MergedDijets/"+new_file_name, 'w')
 df = pd.read_hdf(args.path)[features_group1+features_group2+features_group3]
 Data=df.values
 new_hdf5.create_dataset("data",data=Data)

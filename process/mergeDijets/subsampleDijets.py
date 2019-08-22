@@ -6,7 +6,7 @@ parser.add_argument("--path", dest='path',  default="", help="path")
 args = parser.parse_args()
 
 new_file_name=args.path.split("/")[-1]
-new_hdf5 = h5py.File("../DataVRGhost/FlattenData/ReducedDijetsDSID/"+new_file_name, 'w')
+new_hdf5 = h5py.File("../../DataVRGhost/FlattenData/ReducedDijetsDSID/"+new_file_name, 'w')
 
 f=h5py.File(args.path)
 Data=f.get("data")

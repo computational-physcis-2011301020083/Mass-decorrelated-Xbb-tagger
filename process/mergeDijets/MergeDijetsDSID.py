@@ -19,7 +19,7 @@ for i in Files:
 	else:
 		Merged=np.vstack((Merged,Data))
 
-SaveFile= h5py.File("../DataVRGhost/FlattenData/MergedDijetsDSID/MergedDijets."+args.dsid+".h5", 'a')
+SaveFile= h5py.File("../../DataVRGhost/FlattenData/MergedDijetsDSID/MergedDijets."+args.dsid+".h5", 'a')
 SaveFile.create_dataset("data",data=Merged)
 
 
