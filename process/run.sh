@@ -11,6 +11,3 @@ do
         path=$i
         python split.py  --path $path
 done
-
-
-
