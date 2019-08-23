@@ -1,6 +1,6 @@
 # Mass-decorrelated-Xbb-tagger
 Tools for training and study for de-correlated Xbb tagging using deep neural network
-Wei Ding 
+by Wei Ding 
 wei.ding@cern.ch
 
 1, reweight
