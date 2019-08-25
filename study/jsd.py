@@ -20,7 +20,8 @@ predict=load_file.get("predict")
 predict=np.reshape(predict,(predict.shape[0],predict.shape[1]))
 predict=predict[predict[:,0]==1] #JSD study for Dijets
 #predict=predict[predict[:,2]==1] #JSD study for Top
-info=np.column_stack((predict[:,10],predict[:,6],predict[:,4])) #4,8  mass,weight,New_Score or XbbScore 
+info=np.column_stack((predict[:,10],predict[:,6],predict[:,4])) #mass,weight,New_Score 
+#info=np.column_stack((predict[:,10],predict[:,6],predict[:,8])) #mass,weight,XbbScore 
 info1=info[info[:,2]>=cut]
 info2=info[info[:,2]<cut]
 
