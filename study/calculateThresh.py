@@ -22,8 +22,8 @@ y=predict[:,1]
 score=predict[:,4]
 Xbb=predict[:,8]
 w=predict[:,6]
-#eff_bkg,eff_signal,thres=roc_curve(y,score,sample_weight=w)
-eff_bkg,eff_signal,thres=roc_curve(y,Xbb,sample_weight=w)
+eff_bkg,eff_signal,thres=roc_curve(y,score,sample_weight=w) #New_score
+#eff_bkg,eff_signal,thres=roc_curve(y,Xbb,sample_weight=w) #XbbScore
 
 info=np.column_stack((1.0/eff_bkg,eff_signal,thres))
 efflist=[0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.75,0.8,0.85,0.9,0.95]
