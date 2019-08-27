@@ -18,7 +18,7 @@ def load_Data(data,style):
     y=np.full((load_data.shape[0],),0,dtype=int)
     load_y=keras.utils.to_categorical(y, num_classes=3)
   load_fdata=np.hstack((load_y,load_data))
-  load_fdata[:,3]=load_fdata[:,3]*2000000/np.sum(load_fdata[:,3])
+  load_fdata[:,3]=load_fdata[:,3]*2000000/np.sum(load_fdata[:,3]) #Nominalize sum of weight into total samples, change 2M according to samples
   return load_fdata
 
 outname="train.h5" #Prepare training
