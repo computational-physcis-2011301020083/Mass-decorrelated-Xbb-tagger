@@ -21,7 +21,7 @@ data=data[data[:,2]==1] #Top
 pt=data[:,8]
 weight=data[:,3]
 
-#Reweight toflat pt
+#Reweight to flat pt
 from hep_ml.reweight import BinsReweighter
 original = pt
 xmin, xmax = original.min(), original.max()
